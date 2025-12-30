@@ -105,7 +105,7 @@ export class GeminiService {
     const response = await fetch(`${this.proxyUrl}/api/chat`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ history, message: prompt })
+      body: JSON.stringify({ message: prompt, history })
     });
 
     if (!response.body) return;
